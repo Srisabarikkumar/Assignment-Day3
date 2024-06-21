@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var obj1 = { name: "Person 1", age: 25 };
+      var obj2 = { age: 25, name: "Person 1" };
+
+      var obj1Keys = Object.keys(obj1).sort();
+      var obj2Keys = Object.keys(obj2).sort();
+
+      var areEqual = obj1Keys.every((key) => {
+        var objValue1 = obj1[key];
+        var objValue2 = obj2[key];
+        console.log(objValue1 === objValue2);
+      });
+    </script>
+  </body>
+</html>
